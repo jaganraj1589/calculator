@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;    
+}
+body{
+    font-weight: 400;
+    font-family: monospace;
+   // background: rgb(83,176,222);
+//  background: radial-gradient(circle, #5954b9, #36bdd0);
+}
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    li{
+        a{
+            padding: 20px;
+            display: block;
+            background: #ccc;
+        }
+    }
+}
+.container {
+    width:320px;
+    margin: 20px auto;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(69,69,69,1) 0%, rgba(26,28,29,1) 100%);
+    text-align: center;
+    border-radius: 20px;
+    -webkit-box-shadow: -1px 15px 28px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 15px 28px -9px rgba(0,0,0,0.75);
+    box-shadow: -1px 15px 28px -9px rgba(0,0,0,0.75);
+    table{        
+        a{
+            display: block;
+            padding: 20px;
+            color: #fff;
+            font-size: 21px;
+            position: relative;
+            &.back{
+                &:before{
+                    position:absolute;
+                    content: "<";
+                    left: 13px;
+                }
+                &:after{
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    border:solid 1px #fff;
+                    content: "";
+                }
+            }
+            &.plus{
+                background: #2b383f;
+               // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,48,47,1) 0%, rgba(2,49,54,1) 100%);
+                border-radius: 2px;
+                border-bottom: solid 1px #323030;
+                &.firstkey{
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                }
+            }
+
+            &.equal{
+                background: #3bcab4;
+                border-bottom-right-radius: 20px;
+                border-top-left-radius: 20px;
+            }
+            &.ac{
+                color: tan;
+            }
+        }
+    }
+}
+.outputBlock{
+    padding: 20px;
+    border: none; 
+    box-shadow:none;
+    text-align: right;
+    background: transparent;
+    width: 100%;
+    font-size: 36px;
+    color: #fff;
+    &:focus{
+        box-shadow: none;
+        border: none;
+        outline: none;
+    }
+}
